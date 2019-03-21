@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Base Program</title>
+	<style>
+	/*body{
+		color: red;
+	}
+	div{
+		color: blue;
+		width:100%;
+		height: 200px;
+		background-color: black;
+
+	}
+	div#header{
+		background-color: #e85f5f;
+	}
+	div#content{
+		background-color: #503838;
+	}
+	div#footer{
+		background-color: #4955ff;
+	}
+	div.cheader{
+		color: #c1cef7;
+		font-weight: bold;
+	}*/
+
+	</style>
+	<script type="text/javascript">
+		function onloadpage(){
+			var object=document.getElementsByClassName("cheader");
+			object[0].style.color="#c1cef7";
+			object[0].style.background="#e85f5f";
+			object[0].style.height="200px";
+			
+
+			object[1].style.color="#c1cef7";
+			object[1].style.background="#503838";
+			object[1].style.height="200px";
+
+			object[2].style.color="#c1cef7";
+			object[2].style.background="#4955ff";
+			object[2].style.height="200px";
+
+			var idobject=document.getElementById("header");
+
+			idobject.style.color="black";
+			alert(idobject.outerHTML);
+
+		}
+		
+	</script>
+</head>
+<body onload="onloadpage();">
+<div id="header" class="cheader">Header is going live</div>
+<div id="content" class="cheader">Content</div>
+<div id="footer" class="cheader">Footer</div>
+</body>
+</html>
