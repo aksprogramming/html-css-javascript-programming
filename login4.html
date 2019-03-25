@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style type="text/css">
+		body{
+			font-weight: bold;
+		}
+		table{
+			background-color: #0c7092;
+		    color: white;
+		    padding-left: 180px;
+		    padding-right: 180px;
+		    padding-top: 120px;
+		    padding-bottom: 120px;
+		    margin-left: 30%;
+    		margin-top: 14%;
+		}
+		button{
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			background-color: white;
+
+		}
+		span{
+			color: red;
+			display:none ;
+		}
+	</style>
+	<script type="text/javascript">
+		function validate(){
+
+
+			var username=document.forms[0]['username'].value.trim();
+
+			var password=document.getElementById("password").value.trim();
+
+			passwordError=document.getElementById("passwordError");
+			usernameError=document.getElementById("usernameError");
+			if(username==""&&username.length==0){
+				//alert("Enter Username");
+				usernameError.style.display="inline-block";
+				document.getElementById("username").focus();
+				return false;
+			}
+			usernameError.style.display="none";
+			if(password==""&&password.length==0){
+				//alert("Enter Password");
+				passwordError.style.display="inline-block";
+				document.getElementById("password").focus();
+				return false;
+			}
+			
+			passwordError.style.display="none";
+
+			document.forms[0].submit();
+
+			return true;
+		}
+
+	</script>
+</head>
+<body >
+
+<form action="validate.php" >
+	<table>
+		<tr>
+			<td>Username</td>
+			<td><input type="text" name="username" id="username"><span id="usernameError">X</span></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td><input type="password" name="password" id="password"><span id="passwordError">X</span></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button type="button" onclick="validate()">Login</button></td>
+		</tr>
+	</table>
+	 
+	 
+	
+</form>
+
+
+</body>
+</html>

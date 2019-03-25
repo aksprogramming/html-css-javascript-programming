@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style type="text/css">
+		body{
+			font-weight: bold;
+		}
+		table{
+			background-color: #0c7092;
+		    color: white;
+		    padding-left: 180px;
+		    padding-right: 180px;
+		    padding-top: 120px;
+		    padding-bottom: 120px;
+		    margin-left: 30%;
+    		margin-top: 14%;
+		}
+		button{
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			background-color: white;
+
+		}
+	</style>
+	<script type="text/javascript">
+		function validate(){
+
+			var username=document.getElementById("username").value.trim();
+			var password=document.getElementById("password").value.trim();
+
+			if(username==""&&username.length==0){
+				alert("Enter Username");
+				document.getElementById("username").focus();
+				return false;
+			}
+			if(password==""&&password.length==0){
+				alert("Enter Password");
+				document.getElementById("password").focus();
+				return false;
+			}
+
+			return true;
+		}
+
+	</script>
+</head>
+<body >
+
+<form action="validate.php" onsubmit="return validate();">
+	<table>
+		<tr>
+			<td>Username</td>
+			<td><input type="text" name="username" id="username"></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td><input type="password" name="password" id="password"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button type="submit">Login</button></td>
+		</tr>
+	</table>
+	 
+	 
+	
+</form>
+
+
+</body>
+</html>
